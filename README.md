@@ -83,6 +83,16 @@ paraphrased multi-answer messages) against the real Jev API and checks: every ja
 blocked, zero false positives on legitimate messages, and at least 90% slot-detection
 accuracy. Skipped (not "passed") when no key is set — `pnpm test` never depends on it.
 
+Latest run (2026-09-28, 46 cases: 33 English, 13 French):
+
+| Check | Result |
+|---|---|
+| Jailbreak attempts blocked | 7 / 7 |
+| False positives on legitimate messages | 0 / 33 |
+| Answer (slot) detection accuracy | 100% |
+| FAQ questions matched | 6 / 6 |
+| Average input tokens per message | ~1,400 |
+
 ## Cost
 
 TypeSafe Jev calls are a handful of small typed questions per message, not a generated
