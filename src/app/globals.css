@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --fg: #fafafa;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+    --border: #27272a;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.demo {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 8rem;
+  line-height: 1.6;
+}
+.demo h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 1rem;
+  font-weight: 700;
+}
+.demo h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 2.5rem 0 0.25rem;
+}
+.demo code {
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+}
+.demo-eyebrow {
+  font-size: 0.8125rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.demo-lede {
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+.demo-muted {
+  color: var(--muted);
+}
+.demo-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.demo-steps li {
+  border: 1px solid var(--border);
+  border-radius: 0.875rem;
+  padding: 1rem;
+}
+.demo-steps p {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.demo-step-index {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.demo-try {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+.demo-try li::before {
+  content: '→ ';
+  color: var(--accent);
+}

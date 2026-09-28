@@ -1,0 +1,40 @@
+{
+  "name": "qualify-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A lead-qualification chat widget that never generates text — a fixed flow of clickable questions, understood by typed AI judgments (TypeSafe Jev), with a regex fallback.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "eval": "vitest run --config vitest.eval.config.ts"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "resend": "^6.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^16.3.6",
+    "jsdom": "^26.0.0",
+    "tailwindcss": "^4.3.3",
+    "@tailwindcss/postcss": "^4.3.3",
+    "typescript": "^5.7.3",
+    "vitest": "^5.0.2"
+  },
+  "packageManager": "pnpm@11.17.0"
+}
