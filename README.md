@@ -1,4 +1,4 @@
-# qualify-chat
+# Qualify-chat
 
 A lead-qualification chat that never generates text.
 
